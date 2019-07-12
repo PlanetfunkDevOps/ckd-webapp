@@ -9,7 +9,7 @@ import "./landing.scss";
 
 export class Landing extends Component {
   state = {
-    step: 1
+    step: 3
   };
 
   nextStep = () => {

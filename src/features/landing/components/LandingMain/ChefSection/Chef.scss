@@ -87,7 +87,7 @@
       width: 30vw;
 
       p {
-        background: #000;
+        background: rgba(0, 0, 0, 0.5);
         width: 400px;
         padding: 0 15px;
         font-size: 1.2rem;
@@ -100,4 +100,128 @@
 
 .chef--section.active {
   opacity: 1;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /*  */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*  */
+  .chef--section {
+    /*  */
+
+    .chef--section-content{
+      flex-direction: column;
+      justify-content: flex-end;
+      /*  */
+
+      .chef--section-content__title {
+        z-index: 110;
+        padding-left: 10px;
+
+        h2 {
+          font-size: 3rem;
+        }
+      }
+
+      .chef--section-content__text {
+
+
+        figure {
+          left: 95px;
+
+          img {
+            width: 400px;
+            height: 300px;
+          }
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  /*  */
+  .chef--section {
+    /*  */
+
+    .chef--section-content{
+      flex-direction: column;
+      justify-content: flex-end;
+      /*  */
+
+      .chef--section-content__title {
+        z-index: 110;
+        padding-left: 10px;
+
+        h2 {
+          font-size: 3rem;
+        }
+      }
+
+      .chef--section-content__text {
+
+
+        figure {
+          left: 95px;
+
+          img {
+            width: 300px;
+            height: 250px;
+          }
+        }
+
+        p {
+          font-size: 10px;
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  /*  */
+  .chef--section {
+    /*  */
+
+    .chef--section-content{
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      /*  */
+
+      .chef--section-content__title {
+        z-index: 110;
+        padding-left: 10px;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .chef--section-content__text {
+
+
+        figure {
+          left: 95px;
+
+          img {
+            width: 175px;
+            height: 150px;
+          }
+        }
+
+        p {
+          font-size: 10px;
+          width: 200px;
+        }
+      }
+    }
+  }
 }
