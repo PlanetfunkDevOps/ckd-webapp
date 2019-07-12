@@ -1,0 +1,103 @@
+/* chef--section */
+.chef--section {
+  /* Dispaly and Box Model */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  .chef--section-overlay {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* Colors and Background */
+    background: black;
+
+    img {
+      /* Positioning */
+      position: absolute;
+      left: -12rem;
+      overflow: hidden;
+
+      /* Dispaly and Box Model */
+      width: 100vw;
+      height: 100vh;
+
+      /* Effects and More */
+      opacity: 0.3;
+      object-fit: cover;
+    }
+  }
+
+  .chef--section-content {
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Display and Box Model */
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20vh;
+    padding: 0 5.5rem;
+
+    /* Colors and Backgrounds */
+    color: #fff;
+
+    figure {
+      /* Positioning */
+      position: absolute;
+
+      img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      /* Display and Box Model */
+      width: 50vw;
+      display: flex;
+      align-items: flex-end;
+      /* margin-bottom: 2.5rem; */
+
+      h2 {
+        /* Display and Box Model */
+        width: 80vw;
+        /* Text */
+        font-size: 7.5rem;
+        line-height: normal;
+        color: #fff;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      display: flex;
+      justify-content: flex-end;
+      /* margin-bottom: 4.5rem; */
+      width: 30vw;
+
+      p {
+        background: #000;
+        width: 400px;
+        padding: 0 15px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        z-index: 110;
+      }
+    }
+  }
+}
+
+.chef--section.active {
+  opacity: 1;
+}

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300&display=swap");
+
+/* Global */
+*,
+:before,
+:after {
+  /* Dispaly and Box Model */
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  /* Displat and Box Model */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  /* Display and Box Model */
+  margin: 0;
+}
+
+a {
+  /* Text */
+  text-decoration: none;
+
+  /* Colors and Backgrounds */
+  color: #000;
+}
+
+figure {
+  /* Display and Box MOdel */
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  /* Display and Box Model */
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  /* Colors and Backgrounds */
+  background-color: transparent;
+}
+
+body {
+  /* Positioning */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* Display and Box Model */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  /* Text */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Helpers */
+.d-flex {
+  /* Display and Box Model */
+  display: flex;
+
+  &.f-center {
+    /* Dispaly and Box Model */
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.f-justify {
+    /* Display and Box Model */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.f-col {
+    flex-direction: column;
+  }
+}
+
+svg {
+  /* Display and Box Model */
+  margin-right: 10px;
+}

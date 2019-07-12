@@ -1,0 +1,474 @@
+/* service Section */
+.service--section {
+  /* Dispaly and Box Model */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  .service--section-overlay {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* Colors and Background */
+    background: black;
+
+    img {
+      /* Positioning */
+      position: absolute;
+      overflow: hidden;
+
+      /* Dispaly and Box Model */
+      width: 100vw;
+      height: 100vh;
+
+      /* Effects and More */
+      opacity: 0.2;
+      object-fit: cover;
+      object-position: 0 -12rem;
+    }
+  }
+
+  .service--section-content {
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Display and Box Model */
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 10vh;
+    padding: 0 7.5rem;
+    justify-content: flex-end;
+
+    /* Colors and Background */
+    color: #fff;
+
+    .service--content-header {
+      /*  */
+      margin-bottom: 1.5rem;
+
+      h2 {
+        /*  */
+        font-size: 3.5rem;
+        color: #fff;
+        margin-bottom: 0;
+
+        span {
+          color: #ff6700;
+        }
+      }
+    }
+
+    .service--card-wrapper {
+      height: 55vh;
+    }
+  }
+}
+
+.service--section.active {
+  opacity: 1;
+}
+
+.service--card-wrapper {
+  /*  */
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  grid-template-rows: repeat(5, 2fr);
+  margin-bottom: 2.5rem;
+
+  .service--card {
+    &.home {
+      /* height: 40vh; */
+      grid-column: 1/2;
+      grid-row: 1/6;
+    }
+
+    &.vacation {
+      grid-column: 2/3;
+      grid-row: 1/4;
+    }
+
+    &.permanent {
+      grid-column: 2/3;
+      grid-row: 4/6;
+    }
+
+    &.show {
+      grid-column: 3/4;
+      grid-row: 1/3;
+    }
+
+    &.campaign {
+      grid-column: 3/4;
+      grid-row: 3/6;
+    }
+  }
+}
+
+.service--card {
+  /* Text */
+  text-align: center;
+  position: relative;
+
+  /* Colors and Background */
+  color: #fff;
+  background: transparent;
+
+  /* Effects adn More */
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #fff;
+
+  figure {
+    /*  */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      object-fit: cover;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .card-content {
+    z-index: 100;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+      transform: translateY(2rem);
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    p {
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+    }
+
+    &__link {
+      transition: all 0.5s ease-in-out;
+      color: #fff;
+      font-size: 0.75rem;
+      opacity: 0;
+      border: 1px solid #fff;
+      padding: 8px;
+    }
+  }
+
+  &:hover {
+    figure {
+      img {
+        opacity: 0.2;
+      }
+    }
+
+    .card-content {
+      h2 {
+        transform: translateY(0.25rem);
+      }
+
+      p {
+        opacity: 1;
+      }
+
+      &__link {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.card-content__link:hover {
+  background: #ff6700;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .service--section {
+    .service--section-content {
+      padding: 0 7.5rem;
+
+      .service--content-header {
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.75rem;
+          margin: 0;
+        }
+      }
+
+      .service--card-wrapper {
+        height: 50vh;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service--section {
+    .service--section-content {
+      padding: 0 4.5rem;
+
+      .service--content-header {
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+
+      .service--card-wrapper {
+        height: 50vh;
+      }
+    }
+  }
+
+  .service--card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    grid-template-rows: repeat(8, 2fr);
+    margin-bottom: 2.5rem;
+
+    .service--card {
+      &.home {
+        grid-column: 1/2;
+        grid-row: 1/6;
+      }
+
+      &.vacation {
+        grid-column: 1/2;
+        grid-row: 6/9;
+
+        img {
+          object-position: 0rem -5rem;
+        }
+      }
+
+      &.permanent {
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        img {
+          object-position: 0 -1rem;
+        }
+      }
+
+      &.show {
+        grid-column: 2/3;
+        grid-row: 4/7;
+      }
+
+      &.campaign {
+        grid-column: 2/3;
+        grid-row: 7/9;
+      }
+    }
+  }
+
+  .service--card {
+    .card-content {
+      h2 {
+        font-size: 0.75rem;
+        transform: translateY(1rem);
+      }
+
+      p {
+        font-size: 0.55rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0.1rem;
+      }
+
+      &__link {
+        font-size: 0.55rem;
+        padding: 2px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .service--section {
+    .service--section-content {
+      padding: 0 5rem;
+
+      .service--content-header {
+        margin-bottom: 1.5rem;
+
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+
+      .service--card-wrapper {
+        height: 50vh;
+      }
+    }
+  }
+
+  .service--card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    grid-template-rows: repeat(8, 2fr);
+    margin-bottom: 2.5rem;
+
+    .service--card {
+      &.home {
+        grid-column: 1/2;
+        grid-row: 1/6;
+      }
+
+      &.vacation {
+        grid-column: 1/2;
+        grid-row: 6/9;
+      }
+
+      &.permanent {
+        grid-column: 2/3;
+        grid-row: 1/4;
+      }
+
+      &.show {
+        grid-column: 2/3;
+        grid-row: 4/7;
+      }
+
+      &.campaign {
+        grid-column: 2/3;
+        grid-row: 7/9;
+      }
+    }
+  }
+
+  .service--card {
+    .card-content {
+      h2 {
+        font-size: 0.65rem;
+        transform: translateY(1rem);
+      }
+
+      p {
+        font-size: 0.55rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.1rem;
+      }
+
+      &__link {
+        font-size: 0.35rem;
+        padding: 2px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .service--section {
+    .service--section-content {
+      justify-content: center;
+      padding: 0 3.5rem;
+
+      .service--content-header {
+        margin-bottom: 1.5rem;
+
+        h2 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.45rem;
+        }
+      }
+
+      .service--card-wrapper {
+        height: 60vh;
+      }
+    }
+  }
+
+  .service--card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 2fr);
+    margin-bottom: 2.5rem;
+
+    .service--card {
+      height: 12vh;
+
+      &.home {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        img {
+          object-position: 1rem -6rem;
+        }
+      }
+
+      &.vacation {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        img {
+          object-position: -1rem -5rem;
+        }
+      }
+
+      &.permanent {
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+        img {
+          object-position: -1.25rem -0.75rem;
+        }
+      }
+
+      &.show {
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+
+      &.campaign {
+        grid-column: 1/2;
+        grid-row: 5/6;
+      }
+    }
+  }
+
+  .service--card {
+    .card-content {
+      h2 {
+        font-size: 0.45rem;
+        transform: translateY(1rem);
+      }
+
+      p {
+        font-size: 0.35rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0.1rem;
+      }
+
+      &__link {
+        font-size: 0.35rem;
+        padding: 2px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

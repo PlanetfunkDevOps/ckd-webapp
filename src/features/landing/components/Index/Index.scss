@@ -1,0 +1,92 @@
+.index {
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+
+  /* Display and Box Model */
+  width: 100%;
+
+  .index-nav {
+    /* Display and Box Model */
+    margin: 0 5.5rem 1.5rem;
+
+    .index-nav__link {
+      /* Display and Box Model */
+      width: 20%;
+
+      /* Colors and Backgrounds */
+      color: #e6e6e6;
+
+      /* Effects and More */
+      opacity: 0.75;
+      border-bottom: 1px solid #e6e6e6;
+
+      /* Text */
+      text-align: center;
+
+      &.active {
+        /* Colors nad Backgrounds */
+        color: #fff;
+
+        /* Text */
+        font-weight: bold;
+
+        /* Effects and more */
+        opacity: 1;
+        border-bottom: 2px solid #ff6700;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .index {
+    .index-nav {
+      margin: 0 5.5rem 1.5rem;
+
+      .index-nav__link {
+        height: 2rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .index {
+    .index-nav {
+      margin: 0 5.5rem 1.5rem;
+
+      .index-nav__link {
+        height: 1.5rem;
+        font-size: 0.65rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .index {
+    .index-nav {
+      margin: 0 1.5rem 1rem;
+
+      .index-nav__link {
+        height: 1.5rem;
+        font-size: 0.45rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .index {
+    .index-nav {
+      margin: 0 1.5rem 1rem;
+
+      .index-nav__link {
+        height: 1rem;
+        font-size: 0.35rem;
+      }
+    }
+  }
+}

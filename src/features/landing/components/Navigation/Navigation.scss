@@ -1,0 +1,130 @@
+.navigation {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  /* Display and Box Model */
+  margin-right: 1.5rem;
+  height: 100vh;
+
+  &__button {
+    /* Display and Box Model */
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+    /* display: none; */
+
+    /* Colors and Backgrounds */
+    color: #e6e6e6;
+
+    /* Text */
+    font-size: 0.75rem;
+
+    /* Effects and More */
+    opacity: 0.75;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+
+    &.nav-up {
+      margin-bottom: 2rem;
+    }
+
+    &.nav-down {
+      margin-top: 2rem;
+    }
+
+    &.active {
+      /* Colors and Backgrounds */
+      color: #fff;
+
+      /* Effects and More */
+      border-bottom: 1px solid #fff;
+      opacity: 1;
+    }
+
+    svg {
+      /* Display and Box Model */
+      margin: 0;
+    }
+  }
+
+  span {
+    color: #fff;
+    font-size: 0.75rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+    svg {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /*  */
+  .navigation {
+    margin-right: 1.25rem;
+    &__button {
+      width: 35px;
+      height: 35px;
+      font-size: 0.65rem;
+    }
+
+    span {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*  */
+  .navigation {
+    margin-right: 1rem;
+    &__button {
+      width: 30px;
+      height: 30px;
+      font-size: 0.55rem;
+    }
+
+    span {
+      font-size: 0.55rem;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  /*  */
+  .navigation {
+    margin-right: 0.75rem;
+
+    &__button {
+      width: 25px;
+      height: 25px;
+      font-size: 0.45rem;
+    }
+
+    span {
+      font-size: 0.45rem;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  /*  */
+  .navigation {
+    margin-right: 0.5rem;
+
+    &__button {
+      width: 20px;
+      height: 20px;
+      font-size: 0.35rem;
+    }
+
+    span {
+      font-size: 0.35rem;
+    }
+  }
+}

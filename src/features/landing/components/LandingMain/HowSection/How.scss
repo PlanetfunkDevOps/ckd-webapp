@@ -1,0 +1,265 @@
+/* How Section */
+.how--section {
+  /* Dispaly and Box Model */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  .how--section-overlay {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* Colors and Background */
+    background: black;
+
+    img {
+      /* Positioning */
+      position: absolute;
+      overflow: hidden;
+
+      /* Dispaly and Box Model */
+      width: 100vw;
+      height: 100vh;
+
+      /* Effects and More */
+      opacity: 0.3;
+      object-fit: cover;
+    }
+  }
+
+  .how--section-content {
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Display and Box Model */
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20vh;
+    padding: 0 5.5rem;
+    justify-content: flex-end;
+
+    /* Colors and Background */
+    color: #fff;
+
+    .how--content-title {
+      /*  */
+      margin-bottom: 2.5rem;
+
+      h2 {
+        /*  */
+        font-size: 3.5rem;
+        color: #fff;
+        margin-bottom: 0;
+
+        span {
+          color: #ff6700;
+        }
+      }
+    }
+
+    .how--card-wrapper {
+      /*  */
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+}
+
+.how--section.active {
+  opacity: 1;
+}
+
+.how--card {
+  /* Display and box Model */
+  width: 18vw;
+  height: 18vw;
+  margin-bottom: 2.5rem;
+
+  /* Text */
+  text-align: center;
+
+  /* Colors and Background */
+  color: #fff;
+  background: transparent;
+
+  /* Effects adn More */
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #fff;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 0px 0px 49px 4px rgba(255, 255, 255, 0.38);
+  }
+
+  figure {
+    /*  */
+    width: 120px;
+    height: 120px;
+    margin: 2rem auto;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .how--section {
+    .how--section-content {
+      padding: 0 5.5rem;
+
+      .how--content-title {
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  .how--card {
+    figure {
+      width: 90px;
+      height: 90px;
+      margin: 1.5rem auto;
+
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    p {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .how--section {
+    .how--section-content {
+      padding: 0 4.5rem;
+
+      .how--content-title {
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .how--card {
+    figure {
+      width: 70px;
+      height: 70px;
+      margin: 1rem auto;
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    p {
+      font-size: 0.55rem;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .how--section {
+    .how--section-content {
+      padding: 0 5rem;
+
+      .how--content-title {
+        margin-bottom: 1.5rem;
+
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+
+      .how--card-wrapper {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .how--card {
+    width: 30vw;
+    height: 30vw;
+    margin-bottom: 0.75rem;
+
+    figure {
+      width: 50px;
+      height: 50px;
+      margin: 0.75rem auto;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    p {
+      height: 2rem;
+      font-size: 0.45rem;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .how--section {
+    .how--section-content {
+      padding: 0 3.5rem;
+
+      .how--content-title {
+        margin-bottom: 1.5rem;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .how--card-wrapper {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .how--card {
+    width: 30vw;
+    height: 30vw;
+    margin-bottom: 0.75rem;
+
+    figure {
+      width: 40px;
+      height: 40px;
+      margin: 0.45rem auto;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    p {
+      height: 1rem;
+      font-size: 0.45rem;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+/*
+Global
+*/
+
+body {
+  background: black;
+}
+
+.logo {
+  &--medium {
+    font-size: 1.5rem;
+  }
+}
+
+.ant-menu-vertical .ant-menu-item {
+  padding: 0;
+  a {
+    padding: 0 15px;
+
+    &.is-active {
+      color: #1890ff;
+    }
+  }
+}
+
+a {
+  color: #ff6700;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+/*
+Text
+*/
+.text-center {
+  text-align: center;
+}
+
+/*
+Margin
+*/
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+/*
+Display
+*/
+.d-block {
+  display: block !important;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+/*
+Layout
+*/
+.d-flex {
+  display: flex;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+/*
+Buttons
+*/
+.ant-btn-primary {
+  background: #ff6700;
+  border-color: #ff6700;
+
+  &:hover,
+  &:active,
+  &:link,
+  &:focus {
+    background: #ff6700;
+    border-color: #ff6700;
+  }
+}
+
+/*
+Colors
+*/
+.c-primary {
+  color: #ff6700;
+}
+
+.c-white {
+  color: white;
+}
+
+/*
+Tabs
+*/
+.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-nav .ant-tabs-tab:hover {
+  color: #ff6700;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #ff6700;
+}
+
+/*
+Card
+*/
+.card {
+  &__footer {
+    border-top: 1px solid #e8e8e8;
+    margin: 20px -24px -6px;
+    padding: 20px 20px 0;
+  }
+}
+
+/*
+Font-size
+*/
+.fsize-11 {
+  font-size: 11px;
+}
+
+.fsize-12 {
+  font-size: 12px;
+}
+
+.view-title {
+  font-size: 24px;
+}
+
+/*
+Ant
+*/
+
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+  overflow-x: hidden;
+  background-image: url(https://www.azamaraclubcruises.com/sites/default/files/heros/med-food-hero_1.jpg);
+  background-size: cover;
+}
+.ant-breadcrumb a {
+  color: white;
+}
+
+.ant-breadcrumb-separator {
+  color: white;
+}
+
+.ant-breadcrumb > span:last-child {
+  color: #ff6700;
+}
+
+.ant-card {
+  width: 95%;
+  margin: auto;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon,
+.ant-steps-item-process .ant-steps-item-icon,
+.ant-steps-item-finish
+  > .ant-steps-item-content
+  > .ant-steps-item-title::after {
+  background: #ff6700;
+  border-color: #ff6700;
+}
+
+.ant-steps-item-process > .ant-steps-item-content > .ant-steps-item-title,
+.ant-steps-item-process .ant-steps-item-content .ant-steps-item-title,
+.ant-steps-item-wait > .ant-steps-item-content > .ant-steps-item-title {
+  color: white !important;
+}
+
+.ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-title {
+  color: #ff6700;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: white;
+
+  svg {
+    margin: auto;
+  }
+}
+
+.ant-input {
+  width: 100%;
+}
+
+.ant-form-item-label > label {
+  color: #ff6700;
+  font-size: 16px;
+}
